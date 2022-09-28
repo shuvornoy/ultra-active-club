@@ -1,0 +1,37 @@
+.developer{
+    width: 280px;
+    height: 510px;
+    background: #bdb9b9;
+    border-radius: 8px;
+}
+.developer img{
+    width: 260px;
+    height: 260px;
+    margin: 10px;
+    border-radius: 8px;
+}
+.developer-name{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    margin-top: 7px;
+}
+.developer-info{
+    margin: 14px;
+}
+.developer-info p{
+    margin-bottom: 0;
+    
+}
+.developer-btn{
+    width: 260px;
+    border: none;
+    background: royalblue;
+    margin: 10px;
+    border-radius: 8px;
+}
+.developer-btn:hover{
+    background: forestgreen;
+}
