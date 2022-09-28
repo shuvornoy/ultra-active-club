@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Developer from '../Developer/Developer';
 import './Developers.css'
 
 const Developers = () => {
     const [developers, setDevelopers] = useState([]);
     const [cart, setCart] = useState([]);
-    
+
     useEffect(() =>{
         fetch('data.json')
         .then(res => res.json())
@@ -14,6 +15,8 @@ const Developers = () => {
 
     const handelAddToCart = (developer) =>{
         console.log(developer)
+        const newCart = [...cart, developer];
+        setCart(newCart);
     }
 
     return (
@@ -28,7 +31,7 @@ const Developers = () => {
               }
             </div>
             <div className="cart-container">
-                <h2>Shuvo Roy</h2>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
