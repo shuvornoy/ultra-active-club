@@ -1,8 +1,13 @@
 import React from 'react';
 import './Cart.css';
-import logo from '../../images/logo.png'
+import logo from '../../images/logo.png';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Cart = ({cart}) => {
+    const diffToast = () =>{
+        toast.success('Successfully toasted!')
+    }
 
     let total = 0;
 
@@ -13,28 +18,36 @@ const Cart = ({cart}) => {
     return (
         <div className='cart'>
             <div className='cart-logo'>
+            <div className='logo'>
             <img src={logo} alt="" />
-            <div className='cart-info'>
-                <h3>Shuvo Roy</h3>
-                <p>i am a developer</p>
+            <h3>Shuvo Roy</h3>
             </div>
+                <p>Hi i am Shuvo roy, i am a programming hero student. Studying diploma in Engineering CSE. My hobby coding.</p>
             </div>
 
             <div className='cart-hight'>
-                <div><h3>53<small>kg</small></h3><p>Weight</p></div>
-                <div><h3>5.5</h3><p>Height</p></div>
-                <div><h3>75<small>yrs</small></h3><p>Age</p></div>
-            </div>
-
-            <div>
-                <h2>Add A Break</h2>
-                <div className='cart-break'>
-                    <button>10s</button>
-                    {/* <button onClick={handelClick}>10s</button>
-                    <button onClick={handelClick}>10s</button>
-                    <button onClick={handelClick}>10s</button> */}
+                <div>
+                    <h3>53<small>kg</small></h3>
+                    <p>Weight</p>
+                </div>
+                <div>
+                    <h3>5.5</h3><p>Height</p>
+                </div>
+         
+                <div>
+                    <h3>20<small>yrs</small></h3
+                    ><p>Age</p>
                 </div>
             </div>
+
+            <h3>Add A Break</h3>
+            <div className='cart-break'>
+                <button>10s</button>
+                <button>10s</button>
+                <button>10s</button>
+                <button>10s</button>
+            </div>
+
 
             <h3>Exercise Details</h3>
             <div className='cart-time'>
@@ -43,11 +56,16 @@ const Cart = ({cart}) => {
             <div className='cart-time'>
                 <h4>Break time: seconds</h4>
             </div>
-            <button className='cart-activity'>
+            <button onClick={diffToast} className='cart-activity'>
                 <p>Activity Completed</p>
             </button>
+            <ToastContainer
+            position="top-center"
+            reverseOrder={false}
+             />
         </div>
     );
 };
 
+    
 export default Cart;
