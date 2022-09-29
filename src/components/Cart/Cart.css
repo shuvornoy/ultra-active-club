@@ -63,9 +63,10 @@
 }
 
 .cart-activity{
+    color: #fff;
     width: 100%;
     margin: 20px 0;
     border: none;
-    background: blue;
+    background: #5e5eef;
     border-radius: 8px;
 }
