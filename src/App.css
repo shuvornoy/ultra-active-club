@@ -1,5 +1,10 @@
-.App {
-  text-align: center;
+.title{
+  position: absolute;
+  margin-left: 75px;
+  color: blueviolet;
+}
+.title span{
+  margin-left: 10px;
 }
 
 .App-logo {

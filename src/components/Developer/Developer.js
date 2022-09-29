@@ -2,7 +2,7 @@ import React from 'react';
 import './Developer.css'
 
 const Developer = (props) => {
-    const {img, name, job, time, age, details} = props.developer;
+    const {img, name, job, time, age} = props.developer;
     // const {handelAddToCart} = props;
     return (
         <div className='developer'>
