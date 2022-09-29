@@ -2,14 +2,14 @@ import React from 'react';
 import './Developer.css'
 
 const Developer = (props) => {
-    const {img, name, job, time, age} = props.developer;
+    const {img, name, job, time, age, details} = props.developer;
     // const {handelAddToCart} = props;
     return (
         <div className='developer'>
             <img src={img} alt="" />
             <div className='developer-info'>
             <p className='developer-name'>{name}</p>
-            <p>{job}</p>
+            <p>Job: {job}</p>
             <p><small>For Age: {age}</small></p>
             <p><small>Time required: {time}s</small></p>
             </div>

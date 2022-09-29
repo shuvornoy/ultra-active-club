@@ -9,6 +9,7 @@ const Cart = ({cart}) => {
     for(const developer of cart){
         total = total + developer.time;
     }
+
     return (
         <div className='cart'>
             <div className='cart-logo'>
@@ -29,9 +30,9 @@ const Cart = ({cart}) => {
                 <h2>Add A Break</h2>
                 <div className='cart-break'>
                     <button>10s</button>
-                    <button>10s</button>
-                    <button>10s</button>
-                    <button>10s</button>
+                    {/* <button onClick={handelClick}>10s</button>
+                    <button onClick={handelClick}>10s</button>
+                    <button onClick={handelClick}>10s</button> */}
                 </div>
             </div>
 
