@@ -40,3 +40,10 @@
 .developer-btn:hover{
     background: forestgreen;
 }
+@media only screen and (max-width:688px){
+    .developer{
+        background-color: aqua;
+        align-items: center;
+    }
+  
+}

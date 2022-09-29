@@ -2,10 +2,12 @@
   position: absolute;
   margin-left: 75px;
   color: blueviolet;
+  padding: 0 10px;
 }
 .title span{
   margin-left: 10px;
 }
+
 
 .App-logo {
   height: 40vmin;

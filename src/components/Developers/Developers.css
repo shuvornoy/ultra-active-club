@@ -6,9 +6,27 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin: 100px 80px;
+    margin: 175px 80px 0 80px;
 }
 .cart-container{
     background-color: darkgrey;
 }
+
+@media only screen and (max-width:688px){
+    .container{
+    display: grid;
+      grid-template-columns: 1fr;
+    }
+    .developers-container{
+        grid-template-columns: 1fr;
+        align-items: center;
+        margin-top: 50%;
+    }
+    .cart-container{
+        background-color: #922222;
+        width: 100%;
+        margin-top: 25px;
+    }
+  }
+  
 
