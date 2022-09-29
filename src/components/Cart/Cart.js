@@ -6,8 +6,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 
 const Cart = ({cart}) => {
+    const [end,secon] = useState(localStorage.getItem("cartdata") ? JSON.parse(localStorage.getItem("cartdata")) :0,);
+
     const diffToast = () =>{
         toast.success('Successfully toasted!')
+    }
+    const seconds = (second)=>{
+        secon(second)
+        localStorage.setItem("cartdata", JSON.stringify(second));
     }
 
     let total = 0;
@@ -16,14 +22,6 @@ const Cart = ({cart}) => {
         total = total + developer.time;
     }
 
-    const [isShown, setIsShown] = useState(false);
-    const handleClick = event => {
-        // 👇️ toggle shown state
-        setIsShown(current => !current);
-    
-        // 👇️ or simply set it to true
-        // setIsShown(true);
-      };
 
     return (
         <div className='cart'>
@@ -43,10 +41,10 @@ const Cart = ({cart}) => {
 
                 <h3>Add A Break</h3>
                 <div className='cart-break'>
-                    <button onClick={handleClick}>10s</button>
-                    
-
-
+                    <button onClick={()=>seconds(10)}>10s</button>
+                    <button onClick={()=>seconds(20)}>20s</button>
+                    <button onClick={()=>seconds(30)}>30s</button>
+                    <button onClick={()=>seconds(40)}>40s</button>
             </div>
 
             <h3>Exercise Details</h3>
@@ -54,7 +52,7 @@ const Cart = ({cart}) => {
                 <h4>Exercise time: {total} seconds</h4>
             </div>
             <div className='cart-time'>
-                <h4>Break time:{isShown} seconds</h4>
+                <h4>Break time: {end} seconds</h4>
             </div>
             <button onClick={diffToast} className='cart-activity'>
                 <p>Activity Completed</p>
