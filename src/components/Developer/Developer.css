@@ -3,6 +3,7 @@
     height: 510px;
     background: #bdb9b9;
     border-radius: 8px;
+    position: relative;
 }
 .developer img{
     width: 260px;
@@ -23,14 +24,18 @@
 }
 .developer-info p{
     margin-bottom: 0;
-    
+    margin-top: 5px;
 }
+
 .developer-btn{
     width: 260px;
     border: none;
     background: royalblue;
     margin: 10px;
     border-radius: 8px;
+    position: absolute;
+    bottom: 0;
+
 }
 .developer-btn:hover{
     background: forestgreen;
